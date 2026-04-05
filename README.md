@@ -115,13 +115,29 @@ curl -X POST http://localhost:5000/add_target \
 ```
 ---
 
-**Scan Workflow**
-Targets are read from ```bash targets.txt ```
-Scheduler prioritizes targets (AI/heuristic based)
-Distributed worker threads scan targets (safe fuzzing + RCE pattern detection)
-ML-based risk classification applied
-AI generates vulnerability explanation and mitigation
-Results stored in ```bash data/results.json ``` and displayed on dashboard
+## 🔍 Scan Workflow
+
+1. **Load Targets**  
+   Targets are read from `data/targets.txt`
+
+2. **Target Prioritization**  
+   Scheduler prioritizes targets using AI/heuristic-based analysis
+
+3. **Scanning Engine**  
+   Distributed worker threads scan targets using:
+   - Safe fuzzing  
+   - RCE pattern detection  
+
+4. **Risk Classification**  
+   Machine learning model classifies vulnerability risk levels
+
+5. **AI Analysis**  
+   AI generates:
+   - Vulnerability explanation  
+   - Suggested mitigation  
+
+6. **Results & Reporting**  
+   Results are stored in `data/results.json` and displayed on the dashboard
 
 ---
 
