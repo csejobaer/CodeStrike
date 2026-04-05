@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI RCE Risk Analyzer Dashboard</title>
+    <script src="/static/chart.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .card { border: 1px solid #333; padding: 10px; margin: 10px; border-radius: 5px; background: #f5f5f5; }
+        h1 { color: #222; }
+    </style>
+</head>
+<body>
+<h1>🛡️ RCE Risk Dashboard</h1>
+<div id="charts"></div>
+
+<script>
+async function updateCharts(){
+    let res = await fetch("/ai_engine");
+    let data = await res.json();
+
+    let container = document.getElementById("charts");
+    container.innerHTML = "";
+
+    data.forEach(r => {
+        let card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+            <h2>${r.target}</h2>
+            <strong>Risk:</strong> ${r.risk} <br>
+            <strong>ML Classified:</strong> ${r.classified_risk} <br>
+            <pre>RCE Findings: ${r.rce_findings.join(", ")}</pre>
+            <pre>Fuzz Findings: ${r.fuzz_findings.join(", ")}</pre>
+        `;
+        container.appendChild(card);
+    });
+}
+
+setInterval(updateCharts, 5000);
+updateCharts();
+</script>
+</body>
+</html>

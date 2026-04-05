@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>📡 Real-time Monitoring</title>
+    <style>
+        body { font-family: monospace; margin: 20px; }
+        pre { background: #eee; padding: 10px; border-radius: 5px; }
+        h1 { color: #222; }
+    </style>
+</head>
+<body>
+<h1>📡 Real-time Monitoring</h1>
+<div id="monitor"></div>
+
+<script>
+async function fetchMonitor(){
+    let res = await fetch("/ai_engine");
+    let data = await res.json();
+    let container = document.getElementById("monitor");
+    container.innerHTML = JSON.stringify(data, null, 2);
+}
+setInterval(fetchMonitor, 5000);
+fetchMonitor();
+</script>
+</body>
+</html>
