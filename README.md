@@ -63,14 +63,18 @@ git clone https://github.com/cse_jobaer/CodeStike.git
 cd CodeStike
 ```
 
----
+--
 
 2. **Clone the repository**
    ```bash
+   
   python -m venv venv
   source venv/bin/activate      # Linux / Mac
   venv\Scripts\activate         # Windows
+  
 ```
+--
+
 3. **Install dependencies**
  ```bash
   pip install -r requirements.txt
