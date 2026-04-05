@@ -79,6 +79,8 @@ cd CodeStike
 ```bash
   pip install -r requirements.txt
 ```
+---
+
 4. **Configure OpenAI API key**
    Set your API key in config.py or as environment variable:
 ```bash
@@ -93,6 +95,8 @@ cd CodeStike
     https://example.com
     https://testsite.local
 ```
+---
+
 ***Usage
 Run the Flask App***
 ```bash
