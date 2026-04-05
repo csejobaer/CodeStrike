@@ -52,7 +52,7 @@ CodeStrike/
 └── results.json # Scan results
 ```
 
----
+----
 
 ## Installation
 
@@ -63,7 +63,7 @@ git clone https://github.com/cse_jobaer/CodeStike.git
 cd CodeStike
 ```
 
----
+----
 
 2. **Clone the repository**
 
@@ -73,23 +73,26 @@ cd CodeStike
   venv\Scripts\activate         # Windows
 ```
 
---
+----
 
 3. **Install dependencies**
- ```bash
+```bash
   pip install -r requirements.txt
 ```
 4. **Configure OpenAI API key**
    Set your API key in config.py or as environment variable:
-   ```bash
+```bash
   export OPENAI_API_KEY="your_openai_api_key_here"   # Linux / Mac
   set OPENAI_API_KEY="your_openai_api_key_here"      # Windows
-   ```
+```
 
-5. **Add target URLs to** ```bash data/targets.txt:
+----
+
+5. **Add target URLs to**
+```bash data/targets.txt:
     https://example.com
     https://testsite.local
-   ```
+```
 ***Usage
 Run the Flask App***
 ```bash
