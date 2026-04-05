@@ -126,12 +126,16 @@ Results stored in ```bash data/results.json ``` and displayed on dashboard
 ---
 
 **Notes**
+
 -**⚠️ Legal & Ethical Use Only**
 Scan only websites you own or have permission to test.
+
 -**🔒 Safe Fuzzing**
 The tool uses simulated payloads only, no real exploit is executed.
+
 -**📡 Real-Time Updates**
 Dashboard updates every 5 seconds.
+
 -**💡 Customization**
   -Add more FUZZ_SAFE_PAYLOADS in config.py
   -Update subdomains in utils/subdomain.py
