@@ -85,6 +85,23 @@ cd CodeStike
   set OPENAI_API_KEY="your_openai_api_key_here"      # Windows
 ```
 
+  #### 🔑 How to Get an OpenAI API Key
+  
+  Step 1: Go to the OpenAI website: https://platform.openai.com  
+  Step 2: Sign up or log in to your account  
+  Step 3: Navigate to the **Dashboard → API Keys** section  
+  Step 4: Click on **"Create new secret key"**  
+  Step 5: You will receive an API key that looks like this:
+```bash
+sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# config.py
+OPENAI_API_KEY = "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+MAX_LINKS_PER_SITE = 50
+MAX_SUBDOMAINS = 5
+FUZZ_SAFE_PAYLOADS = ["test123", "' OR '1'='1", "<script>alert(1)</script>"]
+```
+
+
 
 5. **Add target URLs to**
 
