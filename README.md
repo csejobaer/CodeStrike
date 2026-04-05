@@ -67,7 +67,7 @@ cd CodeStike
 
 2. **Clone the repository**
 
-   ```bash
+```bash
   python -m venv venv
   source venv/bin/activate      # Linux / Mac
   venv\Scripts\activate         # Windows
