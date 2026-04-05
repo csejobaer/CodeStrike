@@ -63,7 +63,6 @@ git clone https://github.com/cse_jobaer/CodeStike.git
 cd CodeStike
 ```
 
-----
 
 2. **Clone the repository**
 
@@ -73,13 +72,11 @@ cd CodeStike
   venv\Scripts\activate         # Windows
 ```
 
-----
 
 3. **Install dependencies**
 ```bash
   pip install -r requirements.txt
 ```
----
 
 4. **Configure OpenAI API key**
    Set your API key in config.py or as environment variable:
@@ -88,13 +85,14 @@ cd CodeStike
   set OPENAI_API_KEY="your_openai_api_key_here"      # Windows
 ```
 
-----
 
 5. **Add target URLs to**
+
 ```bash data/targets.txt:
     https://example.com
     https://testsite.local
 ```
+
 ---
 
 ***Usage
@@ -108,7 +106,8 @@ Dashboard: http://localhost:5000/
 Monitoring: http://localhost:5000/monitor
 AI Explanation: http://localhost:5000/explanation
 ```
-###Add a new target via API
+
+### Add a new target via API
 ```bash
 curl -X POST http://localhost:5000/add_target \
 -H "Content-Type: application/json" \
